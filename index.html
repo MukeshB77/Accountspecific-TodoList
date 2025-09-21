@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    
+    <nav class="navi">
+        <ul class="navmenu">
+            <li class="navitems"><a href="" style="color:#ec4899"><i class="fas fa-tasks"></i> Todo List</a></li>
+            <li class="navitems">
+                <div id="user-info" style="display: none;">
+                    <span id="username-display" style="color: var(--text); margin-right: 10px;"></span>
+                    <button class="logout-btn" id="logout-btn" title="Logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+                <button class="todo" id="login-btn" style="display: block;">Login</button>
+                <button class="todo" id="list-btn">List</button>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="auth-container" id="auth-container">
+        <div class="auth-form">
+            <h2>Please Login</h2>
+            <p>You need to be logged in to access your tasks</p>
+            <button class="add" onclick="window.location.href='login.html'">Go to Login</button>
+        </div>
+    </div>
+
+    <div class="contain" id="contain" style="display: none;">
+        <div class="todohead">
+            <h1 class="top">Your Professional Task Manager</h1>
+            <p>Organize your tasks with style and efficiency</p>
+        </div>
+        
+        <div class="inputbox">
+            <div class="input-group">
+                <input id="inbox" class="in" placeholder="Enter your task" type="text">
+                <select id="priority-select">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <input type="date" id="task-date" class="date-input">
+                <button onclick="addbox()" class="add">ADD TASK</button>
+            </div>
+        </div>
+        
+        <div class="tasks-container" id="tasks-container">
+        
+        </div>
+    
+        <div class="list-section" id="list-section">
+            <button class="close-list" onclick="toggleList()"><i class="fas fa-times"></i></button>
+            <h2 class="list-title">Task History</h2>
+            <table class="tasks-table">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody id="list-table-body">
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src = script.js>
+     
+    </script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+*{
+     margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+}
+
+
+:root {
+    --nblue: #2563eb;
+    --dblue: #1e40af;
+    --neon: #ec4899;
+    --white: #fff;
+    --grey: #64748b;
+    --blue: #112240;
+    --text: #e6f1ff;
+    --just: #ccd6f6;
+}
+
+body, html {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: #0a192f;
+    color: var(--text);
+}
+.navi{
+    height: 70px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    /* justify-content: space-between; */
+    
+      position: fixed;
+            box-shadow: 0 4px 20px rgba(123, 44, 191, 0.2);
+            border-bottom: 1px solid var(--neon);
+            z-index: 1000;
+            background-color: var(--blue);
+             /* margin: 0;
+            padding: 0;
+            box-sizing: border-box; */
+
+}
+
+.navmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.navmenu a{
+    text-decoration: none;
+    /* margin: 10px; */
+    font-weight: bold;
+    color: var(--text);
+}
+.navmenu a:hover{
+    color: var(--neon);
+}
+.navmenu li:first-child{
+
+    
+    margin-left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--neon);
+}
+/* Login button in navigation */
+.login-btn {
+    background-color: var(--nblue);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: var(--dblue);
+    color: var(--white);
+}
+
+/* Back button in navigation */
+.back-btn {
+    background-color: var(--grey);
+    color: var(--white);
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: var(--neon);
+    color: var(--white);
+}
+
+/* Login page styles */
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 40px;
+    background-color: #0a192f;
+    /* padding-top: 70px; */
+}
+
+.login-form {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.login-graphics {
+    flex: 1;
+    background: linear-gradient(135deg, var(--blue), var(--dblue));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, var(--neon), var(--dblue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: var(--text);
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 90%;
+    padding: 15px 15px 15px 45px;
+    border: 2px solid var(--neon);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: var(--text);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--dblue);
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 43px;
+    color: var(--grey);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.remember-me input {
+    margin-right: 8px;
+    width: auto;
+}
+
+.forgot-password {
+    color: var(--neon);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-form-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--dblue);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.login-form-btn:hover {
+    background-color: var(--neon);
+    transform: translateY(-2px);
+}
+
+.signup-link {
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 30px;
+}
+
+.signup-link a {
+    color: var(--neon);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.social-login {
+    text-align: center;
+}
+
+.social-login p {
+    color: var(--text);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background-color: var(--grey);
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-btn.google {
+    background-color: #DB4437;
+}
+
+.social-btn.facebook {
+    background-color: #4267B2;
+}
+
+.social-btn.github {
+    background-color: #333;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Graphics section */
+.graphic-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-icon {
+    position: absolute;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.7);
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.floating-icon:nth-child(2) {
+    top: 60%;
+    left: 30%;
+    animation-delay: 2s;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.floating-icon:nth-child(3) {
+    top: 40%;
+    left: 60%;
+    animation-delay: 4s;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.floating-icon:nth-child(4) {
+    top: 70%;
+    left: 70%;
+    animation-delay: 1s;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Responsive design for login page */
+@media (max-width: 900px) {
+    .login-graphics {
+        display: none;
+    }
+    
+    .login-form {
+        max-width: 100%;
+    }
+}
+
+/* Add these styles to the existing style.css file */
+
+/* Auth container styles */
+.auth-container {
+    display: none;
+    min-height: calc(100vh - 70px);
+    background-color: var(--blue);
+    padding: 50px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form {
+    background-color: rgba(17, 34, 64, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid var(--neon);
+}
+
+.auth-form h2 {
+    color: var(--white);
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.auth-form p {
+    color: var(--text);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Navigation styles for login button */
+.navitems {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .auth-form {
+        padding: 30px 20px;
+    }
+    
+    .navitems {
+        gap: 10px;
+    }
+    
+    .todo {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navitems {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .todo {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}

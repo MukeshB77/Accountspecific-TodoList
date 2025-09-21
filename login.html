@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Todo List</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navi" aria-label="Main navigation">
+        <ul class="navmenu">
+            <li class="navitems"><a href="index.html" style="color:#ec4899"><i class="fas fa-tasks"></i> Todo List</a></li>
+            <li class="navitems"><a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i>      Back</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-container">
+        <div class="login-form" aria-labelledby="login-header">
+            <div class="login-header" id="login-header">
+                <h1 id="form-title">Welcome Back</h1>
+                <p id="form-subtitle">Sign in to manage your tasks</p>
+            </div>
+            
+            <form id="authForm" autocomplete="on" novalidate>
+                <div id="error-message" style="color:#ec4899; margin-bottom:10px; display:none;" role="alert"></div>
+                <div id="success-message" style="color:#22c55e; margin-bottom:10px; display:none;" role="alert"></div>
+                
+                <div class="form-group" id="name-group" style="display: none;">
+                    <label for="name">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        autocomplete="name"
+                        placeholder="Enter your full name"
+                    >
+                    <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        required 
+                        autocomplete="username"
+                        placeholder="Enter your username"
+                        aria-required="true"
+                    >
+                    <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required 
+                        autocomplete="current-password"
+                        placeholder="Enter your password"
+                        aria-required="true"
+                    >
+                    <i class="fas fa-lock input-icon" aria-hidden="true"></i>
+                </div>
+                
+                <div class="form-group" id="confirm-password-group" style="display: none;">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input 
+                        type="password" 
+                        id="confirm-password" 
+                        name="confirm-password" 
+                        autocomplete="new-password"
+                        placeholder="Confirm your password"
+                    >
+                    <i class="fas fa-lock input-icon" aria-hidden="true"></i>
+                </div>
+                
+                <div class="form-options" id="login-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                
+                <button type="submit" class="login-form-btn" id="submit-btn" aria-label="Sign In">Sign In</button>
+                
+                <div class="signup-link">
+                    <span id="auth-switch-text">Don't have an account?</span>
+                    <a href="#" id="auth-switch-link">Sign up</a>
+                </div>
+            </form>
+            
+            <div class="social-login">
+                <p>Or sign in with</p>
+                <div class="social-icons">
+                    <button type="button" class="social-btn google" aria-label="Sign in with Google"><i class="fab fa-google"></i></button>
+                    <button type="button" class="social-btn facebook" aria-label="Sign in with Facebook"><i class="fab fa-facebook-f"></i></button>
+                    <button type="button" class="social-btn github" aria-label="Sign in with GitHub"><i class="fab fa-github"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="login-graphics" aria-hidden="true">
+            <div class="graphic-container">
+                <div class="floating-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <div class="floating-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="floating-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="floating-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js">
+     
+    </script>
+</body>
+</html>
