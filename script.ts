@@ -65,13 +65,13 @@ function saveTasks(tasks: Task[]): void {
 document.getElementById("logout-btn")!.addEventListener("click", function(): void {
     localStorage.removeItem("currentUser");
     checkAuth();
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 });
 
 document.getElementById("login-btn")!.addEventListener("click", function(): void {
     const currentUser = localStorage.getItem("currentUser");
     if (!currentUser) {
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     }
 });
 

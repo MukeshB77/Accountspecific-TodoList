@@ -71,7 +71,7 @@ document.getElementById('authForm').addEventListener('submit', function (e) {
         }
         // Login successful
         localStorage.setItem('currentUser', username);
-        window.location.href = 'index.html';
+        window.location.href = 'login.html';
     }
     else {
         // Registration logic

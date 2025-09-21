@@ -68,12 +68,12 @@ function saveTasks(tasks) {
 document.getElementById("logout-btn").addEventListener("click", function () {
     localStorage.removeItem("currentUser");
     checkAuth();
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 });
 document.getElementById("login-btn").addEventListener("click", function () {
     var currentUser = localStorage.getItem("currentUser");
     if (!currentUser) {
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     }
 });
 // Initialize
